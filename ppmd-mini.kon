@@ -1,0 +1,32 @@
+description=ppmd mini
+version=1.0.0
+private=true
+author=Thomas Kunze
+build{
+  sources[
+    lib/Ppmd8.c
+    lib/Ppmd8Dec.c
+    lib/Ppmd8Enc.c
+  ]
+  includes[
+    lib
+  ]
+  libs[
+    Ppmd8.obj
+    Ppmd8Dec.obj
+    Ppmd8Enc.obj
+  ]
+  target=static
+  output=lib/ppmd.lib
+  export{
+    includes[
+      lib
+    ]
+    librarypaths[
+      lib
+    ]
+    libs[
+      ppmd.lib
+    ]
+  }
+}
